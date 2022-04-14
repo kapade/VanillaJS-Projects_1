@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <title>FlexBox Navbar</title>
+</head>
+<body>
+    
+    <nav>
+        <ul class="menu">
+        <li class="logo"><a href="#">Coding <span >Addict</span></a></li>
+        <li class="item"><a href="#">Home</a></li>
+        <li class="item"><a href="#">About</a></li>
+        <li class="item"><a href="#">Projects</a></li>
+        <li class="item" ><a href="#" id="last">Contacts</a></li>
+        <li class="social"><a href="#"><i class="fa fa-facebook"></i></a></li>
+        <li class="social"><a href="#"><i class="fa fa-twitter"></i></a></li>
+        <li class="social"><a href="#"><i class="fa fa-behance"></i></i></a></li>
+        <li class="social"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+        <li class="toggle"><span class="lines"></span></li>
+    </ul>
+    </nav>
+</body>
+
+<script>
+ const toggle = document.querySelector('.toggle');
+ const items = document.querySelectorAll('.item');
+//  console.log(items);
+
+function handleNavBar(){
+    items.forEach(item=>{
+        if(item.style.display === 'none'){
+            item.style.display ='block'
+            toggle.style.order = "1"
+        }else{
+            item.style.display = "none"
+        }
+})}
+
+ toggle.addEventListener('click',handleNavBar)
+
+
+</script>
+</html>

@@ -1,0 +1,127 @@
+html{
+    box-sizing: border-box;
+}
+
+*,*::before,*::after{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.about h2{
+    text-transform: capitalize;
+    font-size: 2.8rem;
+    letter-spacing: 0.25rem;
+}
+.about p{
+    color: hsl(210, 22%, 49%);
+    font-size: 1.3rem;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+}
+.app{
+    width: 85%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+img{
+    width: 45%;
+    height: 45vh;
+    border-radius: 25px;
+    margin: 0 auto;
+}
+.tabs_btns{
+    display: flex;
+    flex-wrap: wrap;
+    width: 45%;
+    height: 45vh;
+    margin: 0 auto;
+    border-radius: 25px;
+    overflow: hidden;
+}
+.tabs_btns button{
+    display:inline-block;
+    flex: 1;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    padding: 1rem 1.5rem;
+    text-align: start;
+    letter-spacing: 0.25rem;
+    border: none;
+    margin: 0;
+    background:hsl(212, 33%, 89%);
+    cursor: pointer;
+    
+}
+
+.tabs_briefs{
+    
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: white;
+    
+}
+.tabs_briefs h4{
+    display: none;
+    text-align:start;
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    letter-spacing: 0.2rem;
+    margin: 0;
+}
+
+.brief{
+    display: none;
+    color: hsl(210, 22%, 49%);
+    font-size: 1.1rem;
+    letter-spacing: 0.1rem;
+    text-align:start;
+    width:100%;
+    line-height: 1.8rem;
+}
+
+@media screen and (max-width: 1100px) {
+.app{
+    display: inline-block;
+    width: 100vw;
+}
+img{
+    width: 90vw;
+    margin-bottom: 2rem;
+}
+.tabs_btns{
+    width: 90vw;
+    margin-bottom: 5rem;
+}
+
+}
+button.open{
+    background: white;
+}
+.brief.open{
+      display: flex;
+}
+
+.tabs_briefs h4.open{
+    display: flex;
+}
+

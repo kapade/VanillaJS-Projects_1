@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Counter</h1>
+        <span id="value">0</span>
+        <button class="dec">decrease</button>
+        <button class="res">reset</button>
+        <button class="inc">increase</button>
+    </div>
+
+    <script>
+const buttons = document.querySelectorAll('button');
+let counter = document.querySelector('#value')
+function handleClick(){
+if(this.classList[0]==="dec"){
+    counter.innerHTML--;
+    counter.style.color = "red"
+    // console.log(counter.innerHTML)
+}else if(this.classList[0]==="res"){
+    counter.innerHTML=0;
+    counter.style.color = "black"
+}else if (this.classList[0]==="inc"){
+    counter.innerHTML++;
+    counter.style.color = "green"
+}
+
+}
+buttons.forEach(button=>button.addEventListener('click',handleClick))
+    </script>
+</body>
+</html>

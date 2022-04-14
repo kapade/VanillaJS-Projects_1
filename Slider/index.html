@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="slider_container">
+        <div class="slide">
+            <img src="./img-1.jpeg" class="image">
+            <h1>1</h1>
+        </div>
+        <div class="slide">
+            <h1>2</h1>
+        </div>
+        <div class="slide">
+            <img src="./img-2.jpeg" class="image">
+            <h1>3</h1>
+        </div>
+        <div class="slide">
+            <div class="profile">
+                <img src="./person-1.jpeg" class="person">
+                <h1>4</h1>
+                <h3>susan doe</h3>
+            </div>
+        </div>
+    </div>
+    <div class="btn_container">
+        <button class="prev">prev</button>
+        <button class="next">next</button>
+    </div>
+</body>
+
+<script>
+const slides = document.querySelectorAll('.slide');
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
+let slideIndex = 0;
+
+slides.forEach((slide,index)=>{
+    slide.style.left = `${index*100}%`
+
+});
+function slider(){
+    slides.forEach(slide=>{
+        slide.style.transform = `translateX(-${slideIndex*100}%)`;
+        slide.style.transition = 'all 0.5s ease-out';
+    })
+}
+
+function scrollLeft(){
+    if(slideIndex<0){
+        slideIndex =3;
+    }else{
+        slideIndex--;
+    }
+    slider();
+}
+function scrollRight(){
+    console.log(slideIndex);
+    if(slideIndex>slides.length-2){
+        slideIndex = 0;
+        slider();
+    }else{
+        slideIndex++;
+    }
+
+    slider();
+}
+prevBtn.addEventListener('click',scrollLeft);
+nextBtn.addEventListener('click',scrollRight);
+</script>
+
+</html>

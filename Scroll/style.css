@@ -1,0 +1,163 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+.homepage {
+  min-height: 100vh;
+  background: linear-gradient(rgba(63, 208, 212, 0.5), rgba(0, 0, 0, 0.7)),
+    url("https://vannilla-js-basic-project-10-scroll.netlify.app/hero-bcg.jpeg")
+      center/cover no-repeat;
+}
+.navbar {
+  padding: 2rem;
+  height: inherit;
+  z-index: 1;
+}
+.navbar .scrolled{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    box-shadow: 0 5px 15px black;
+}
+.logo img {
+  height: 85px;
+  margin-top: 1rem;
+}
+.logo .lines {
+  display: none;
+}
+.buttons ul li:last-child {
+  margin-right: 12rem;
+}
+.buttons ul {
+  list-style: none;
+  font-size: 1.5rem;
+}
+.buttons ul .active{
+    list-style: none;
+    font-size: 1.5rem;
+    display: block;
+}
+
+.buttons ul li {
+  padding: 1.3rem;
+  color: hsl(210, 22%, 49%);
+  text-transform: capitalize;
+  cursor: pointer;
+  font-weight: bolder;
+  letter-spacing: 0.25rem;
+}
+.buttons ul li:hover {
+  color: black;
+}
+
+.lines div {
+  height: 5px;
+  background: black;
+  margin: 5px 0px;
+  border-radius: 25px;
+}
+.lines:hover div {
+  transform: scale(1.1);
+  background-color: hsla(182, 63%, 54%);
+  transition: background-color 0.5s scale 0.5s;
+  cursor: pointer;
+}
+.lines {
+  display: block;
+  width: 35px;
+}
+
+@media only screen and (max-width: 950px) {
+  .navbar {
+    background: white;
+  }
+  .buttons ul {
+    display: none;
+  }
+  .logo .lines {
+    display: inline-block;
+    position: absolute;
+    right: 5rem;
+    top: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 950px) {
+  .logo .lines {
+    display: none;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+  }
+  .buttons ul {
+    display: flex;
+  }
+  .buttons ul li {
+    color: rgb(71, 71, 73);
+    
+  }
+}
+
+/* HOME PAGE */
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 12rem;
+  color: white;
+}
+
+h1,
+button {
+  text-transform: uppercase;
+}
+h1 {
+  text-align: center;
+  font-size: 4.5rem;
+  letter-spacing: 0.7rem;
+}
+p {
+  margin: 2rem 0;
+  text-align: center;
+  line-height: 1.5rem;
+  letter-spacing: 0.25rem;
+  max-width: 30rem;
+  font-size: 1.1rem;
+}
+button {
+  padding: 1rem;
+  background: transparent;
+  color: white;
+  display: flex;
+  border: 3px solid white;
+  font-size: 1.1rem;
+  letter-spacing: 0.5rem;
+  font-weight: bold;
+}
+
+section {
+  height: 100vh;
+}
+section h1,section span{
+    padding-top: 15rem;
+}
+span {
+  color: hsla(182, 63%, 54%);
+}
+section:nth-child(even) {
+  background: whitesmoke;
+}

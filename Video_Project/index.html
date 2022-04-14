@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="preloader">
+        <img src="./videos/Walk.gif" alt="" >
+    </div>
+    <div class="container">
+        <video src="./videos/video.mp4" muted autoplay loop></video>
+        <h1 class="title">video project</h1>
+        <button class="btn">
+            <span>play</span>
+            <span>pause</span>
+            <span class="toggle"></span>
+        </button>
+    </div>
+</body>
+
+<script>
+    const btn = document.querySelector('.btn')
+    const video = document.querySelector('video')
+    const preloader = document.querySelector('.preloader');
+    function handleChange(){
+        if(!video.paused){
+       btn.classList.add('change')
+       video.pause();
+        }else{
+            btn.classList.remove("change")
+        }
+    }
+    btn.addEventListener('click',handleChange)
+    window.addEventListener('load',handleLoad)
+    function handleLoad(){
+        preloader.style.visibility= 'hidden';
+    }
+</script>
+</html>

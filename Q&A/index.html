@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questions & Answers</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./fontawesome-free-5.12.0-web/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes&amp;display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="accordion">
+        <div class="title">General Questions</div>
+        <div class="accordion-item">
+            <div class="accordion-item-header ">
+                Do You Accept All Major Credit Cards?
+            </div>
+            <div class="accordion-item-body">
+                <div class="accordion-item-body-content">
+                    Lorem ipsum dolor sit amet, consectetur 
+                    adipisicing elit. Est dolore illo dolores quia nemo 
+                    doloribus quaerat, magni numquam repellat reprehenderit.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-item-header">
+                Do You Suppport Local Farmers?
+            </div>
+            <div class="accordion-item-body">
+                <div class="accordion-item-body-content">
+                    Lorem ipsum dolor sit amet, consectetur 
+                    adipisicing elit. Est dolore illo dolores quia nemo 
+                    doloribus quaerat, magni numquam repellat reprehenderit.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-item-header">
+                Do You Use Organic Ingredients?
+            </div>
+            <div class="accordion-item-body">
+                <div class="accordion-item-body-content">
+                    Lorem ipsum dolor sit amet, consectetur 
+                    adipisicing elit. Est dolore illo dolores quia nemo 
+                    doloribus quaerat, magni numquam repellat reprehenderit.
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const headers = document.querySelectorAll('.accordion-item-header');
+    headers.forEach(header=>header.addEventListener('click',event=>{
+        header.classList.toggle("active");
+    }))
+
+</script>
+</html>

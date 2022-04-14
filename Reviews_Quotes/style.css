@@ -1,0 +1,144 @@
+html{
+    box-sizing: border-box;
+    font-size: 1rem;
+    font-family: "Roboto", sans-serif;
+}
+
+*,*::before,*::after{
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: hsl(210, 36%, 96%);
+}
+
+.main{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.heading{
+    margin-bottom: 100px;
+    font-size: 1.8rem;
+    letter-spacing: 3px;
+    margin-bottom: 90px;
+}
+h2{
+    margin-bottom: 1.5px;
+}
+.line{
+    border-bottom: 6px solid hsl(205, 78%, 60%);
+    width: 100px;
+    display: inline-block;
+    justify-content: center;
+}
+
+.modal{
+    background: white;
+    display: inline-block;
+    width: 40vw;
+    min-height: 60vh;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgb(189, 187, 187);
+}
+
+
+.image-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+img{
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+}
+.circle{
+    width: 180px;
+    height: 180px;
+    background: hsl(205, 78%, 60%);
+    border-radius: 50%;
+    position: absolute;
+    right: calc(50vw - 6.3rem);
+    z-index:0;
+}
+.thing{
+    background: hsl(205, 78%, 60%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position:fixed;
+    top: 35%;
+    right: calc(50vw + 3rem);
+    z-index: 3;
+    color: aliceblue;
+    font-size: 4rem;
+    text-align: center;
+}
+
+.info{
+    margin-top: 120px;
+}
+
+h3{
+    margin-top: 25px;
+    letter-spacing: 4px;
+    font-size: 1.3rem;
+    margin-bottom: 1px;
+}
+
+.job_title{
+    text-transform: uppercase;
+    color: hsl(205, 78%, 60%);
+}
+
+.brief{
+    color: hsl(210, 22%, 49%);
+    line-height: 1.5rem;
+    letter-spacing: 1px;
+    font-size: 20px;
+    font-family: 'Open Sans' sans-serif;
+}
+
+.button {
+    width: 40px;
+    height: 44px;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+
+  #previous {
+    color: hsl(205, 86%, 81%);
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  #next {
+    color: hsl(205, 86%, 81%);
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .random{
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    border: 3px solid hsl(205, 78%, 60%);
+    background-color: hsl(208, 60%, 95%);
+    color:  hsl(205, 78%, 60%);
+    cursor: pointer;
+  }
+
+  .random:hover{
+    background: hsl(205, 78%, 60%);
+    color: black;
+    transition: background 1s,color 1s;
+  }

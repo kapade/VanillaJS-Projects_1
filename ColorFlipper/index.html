@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Flipper</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<nav class="menu">
+    <h2>Color Flipper</h2>
+    <li>Simple</li>
+    <li onclick="changeBackgroundHex()">Hex</li>
+</nav>
+
+<div class="main">
+    <div class="container">
+        <h1>Background Color : <span class="clr">#f1f5f8</span></h1>
+        <button class="clicky">Click Me</button>
+    </div>
+    
+</div>
+
+
+<script>
+const color = document.querySelector('.clr')
+const background = document.querySelector('.main');
+const clicky = document.querySelector('.clicky');
+const hexLi = document.querySelector('.hex');
+function changeBackgroundHex(){
+    const randomColor = Math.floor(Math.random()*16777215).toString(16);
+    background.style.background = "#" + randomColor;
+    color.innerHTML = "#" + randomColor;
+}
+
+clicky.addEventListener('click',changeBackgroundHex)
+
+</script>
+</body>
+</html>

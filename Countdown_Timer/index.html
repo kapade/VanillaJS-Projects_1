@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div class="left_container">
+        <img src="./gift.jpeg" alt="" srcset="">
+    </div>
+<div class="right_container">
+    <h2 class="title">old iphone giveaway</h2>
+    <h2 class="announcement">Giveaway ends on monday <span></span></h2>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit molestiae cum libero atque ut voluptate qui consectetur aliquid incidunt voluptatem quos, dolore, non commodi quaerat aliquam eligendi, quisquam totam blanditiis.</p>
+    <div class="box_container">
+        <div class="box">
+            <h3 id="days">00</h3>
+            <span >DAYS</span>
+        </div>
+        <div class="box">
+            <h3 id="hours">00</h3>
+            <span >HOURS</span>
+        </div>
+        <div class="box">
+            <h3 id="mins">00</h3>
+            <span >MINS</span>
+        </div>
+        <div class="box">
+            <h3 id="secs">00</h3>
+            <span >SECS</span>
+        </div>
+    
+    </div>
+</div>
+
+</div>
+
+    <script>
+const days = document.querySelector('#days');
+const hours = document.querySelector('#hours');
+const mins = document.querySelector('#mins');
+const secs = document.querySelector('#secs');
+const end = document.querySelector('.announcement')
+const currentYear = new Date().getFullYear();
+const currentMonth = new Date().getMonth();
+
+
+const endDate = new Date(`Monday ${currentMonth+1} 28 ${currentYear} 11:30:00`);
+function countDown(){
+    const currentDate= new Date();
+    const difference = endDate - currentDate;
+    const daysCount = Math.floor(difference/1000/60/60/24);
+    const hoursCount = Math.floor(difference/1000/60/60)%24;
+    const minutesCount = Math.floor(difference/1000/60)%60;
+    const secondsCount = Math.floor(difference/1000)%60;
+    days.innerHTML = daysCount;
+    hours.innerHTML = hoursCount<10 ? '0'+ hoursCount : hoursCount;
+    mins.innerHTML = minutesCount<10 ? '0'+ minutesCount : minutesCount;
+    secs.innerHTML =  secondsCount<10 ? '0'+ secondsCount : secondsCount;
+    end.innerHTML = `Giveaway ends on Monday, 28  February ${currentYear} 11:30:00 am`;
+}
+setInterval(countDown,1000);
+    </script>
+</body>
+</html>

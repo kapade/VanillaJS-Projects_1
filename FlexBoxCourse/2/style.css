@@ -1,0 +1,70 @@
+ html{
+    box-sizing: border-box;
+}
+
+*,*::before,*::after{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: hsl(210, 36%, 96%);
+    font-family: "Open Sans", sans-serif;
+    
+}
+h3{
+    letter-spacing: 4px;
+    font-weight: 400;
+    text-shadow: 0px 3px 5px #888888;
+    padding: 25px;
+    font-size: 2rem;
+    text-align:center;
+    background: yellowgreen;
+}
+span{
+    color: hsl(205, 89%, 70%);
+    text-shadow: 0px 2px 2px #888888;
+    display: inline-block;
+    display: inline;
+}
+a{
+    font-size: 1.4rem;
+}
+a,.social{
+    letter-spacing: 3px;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    transition: all 1s;
+    padding: 30px;
+    background-color: tomato;
+}
+
+.social{
+    color: hsl(205, 89%, 70%);
+    font-size: 1.5rem; 
+    display: flex;
+    width: 100%;
+}
+a:hover, .fa:hover{
+   color: hsl(202, 84%, 83%);
+}
+.flex-nav{
+    background: white;
+    box-shadow:0 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+}
+
+.flex-nav ul{
+    list-style: none;
+    display: flex;
+
+    
+}
+
+@media all and (max-width:1100px){
+
+}

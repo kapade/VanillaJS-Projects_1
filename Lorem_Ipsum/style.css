@@ -1,0 +1,80 @@
+html{
+    box-sizing: border-box;
+}
+
+*,*::before,*::after{
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: hsl(210, 36%, 96%);
+    font-family: "Roboto", sans-serif;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    min-height: 100vh;
+    min-width: 100vw;
+    margin-top: 10vh;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+h2{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    letter-spacing: 0.20rem;
+    color: hsl(205, 86%, 17%);
+    margin-bottom: 1.5rem;
+}
+
+label{
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    letter-spacing: 0.45rem;
+    color: hsl(205, 86%, 17%);
+}
+#numOfPars{
+    border-radius: 12px;
+    width: 5rem;
+    border: none;
+    padding:0.5rem 0.85rem;
+    margin: 1rem;
+    font-size: 1.25rem;
+    color: hsl(205, 86%, 17%);
+}
+#btn{
+    text-transform: uppercase;
+    color: hsl(205, 86%, 17%);
+    font-size: 1.25rem;
+    padding:0.5rem 0.85rem;
+    background: #49a6e9;
+    border-radius: 15px;
+    border: none;
+    box-shadow:  0 1px 4px rgb(184, 180, 180);
+    letter-spacing: 0.15rem;
+}
+
+.content{
+    
+    color: hsl(210, 22%, 49%);
+    font-size: 1.1rem;
+    letter-spacing: 0.1rem;
+    line-height: 1.5rem;
+    text-align: center;
+    width: 80%;
+}
+.ctn{
+    margin-bottom: 2rem;
+}

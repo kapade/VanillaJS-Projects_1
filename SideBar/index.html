@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <title>FlexBox Navbar</title>
+</head>
+<body>
+    
+    <section>
+        <ul class="menu">
+        <li class="logo"><a href="#">Coding <span >Addict</span></a></li>
+        <li class="toggle2"><span class="close"></span></li>
+        <li class="item"><a href="#">Home</a></li>
+        <li class="item"><a href="#">About</a></li>
+        <li class="item"><a href="#">Projects</a></li>
+        <li class="item" ><a href="#" id="last">Contacts</a></li>
+        <ul class="social-icons">
+            <li class="social"><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li class="social"><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li class="social"><a href="#"><i class="fa fa-behance"></i></i></a></li>
+            <li class="social"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+        </ul>
+        
+    </ul>
+    <div class="toggle"><span class="lines"></span></div>
+    </section>
+
+    <script>
+        const closeBtn = document.querySelector('.close');
+        const menuItems = document.querySelectorAll('ul');
+        const sectionItems = document.querySelector("section");
+        const toggleBtn = document.querySelector('.lines');
+        // console.log(menuItems)
+        function handleClose(){
+            menuItems.forEach(menuItem=>{
+                sectionItems.style.background = "hsl(210, 36%, 96%)"
+                sectionItems.style.boxShadow = "none"
+                menuItem.style.display= "none";
+            })
+        }
+        function handleOpen(){
+            menuItems.forEach(menuItem=>{
+                if(menuItem.style.display === 'none'){
+                menuItem.style.display= "flex";
+                sectionItems.style.background = "white"
+                sectionItems.style.boxShadow = "0 5px 15px rgba(0, 0, 0, 0.1)"
+        }else{
+            menuItem.style.display = 'none'
+            sectionItems.style.background = "hsl(210, 36%, 96%)"
+                sectionItems.style.boxShadow = "none"
+        }
+            })
+        }
+        closeBtn.addEventListener('click',handleClose);
+        toggleBtn.addEventListener('click',handleOpen)
+    </script>
+</body>

@@ -1,0 +1,136 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+.wrapper {
+  background: url("./depositphotos_292112444-stock-photo-interior-background-with-wooden-cabinet.jpg")
+    no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.container{
+    background: white;
+    border-radius: 20px;
+    padding: 4rem 1rem;
+    box-shadow:  0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 40vw;
+    /* display: none; */
+}
+.header{
+    font-size: 3.7rem;
+    letter-spacing: 0.3rem;
+    color: hsl(209, 61%, 16%);;
+}
+.open{
+    background:#49a6e9 ;
+    color: white;
+    font-size: 1.2rem;
+    text-transform:uppercase;
+    letter-spacing: 0.3rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+    border: none;
+    box-shadow: 0 1px 3px rgb(168, 168, 168);
+    margin-top: 2rem;
+}
+.open:hover{
+    background: transparent;
+    color: #49a6e9;
+    border: 2px solid #49a6e9;
+    transition: all 0.1s ease-in;
+}
+.modal {
+  background: rgba(73, 166, 233, 0.5); 
+  display: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.modal_container{
+    background: white;
+    border-radius: 20px;
+    padding: 7rem 1rem;
+    box-shadow:  0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 40vw;
+}
+h3{
+    font-size: 1.7rem;
+    letter-spacing: 0.3rem;
+}
+.close:hover{
+    color: red;
+}
+
+  .close::before,
+  .close::after {
+    background: hsl(360, 67%, 44%);
+    display: inline-block;
+    position: fixed;
+    left: calc(55vw);
+    top: calc(40vh);
+    height: 7px;
+    width: 40px;
+    border-radius: 20px;
+    content: "";
+    cursor: pointer;
+    order: 1;
+    margin: -0.9rem 6rem;
+  }
+  .close::before {
+    transform: rotate(50deg);
+    transition: all linear;
+  }
+
+  .close::after {
+    transform: rotate(-50deg);
+    transition: all  linear;
+  }
+
+  @media screen and (max-width:900px) {
+
+    span.close::before,span.close::after{
+        position: fixed;
+        left: calc(50vw);
+        top: calc(40vh);
+    }
+
+  }
+  @media screen and (max-width:660px) {
+
+    span.close::before,span.close::after{
+        position: fixed;
+        left: calc(45vw);
+        top: calc(40vh);
+    }
+
+  }
+  @media screen and (max-width:550px) {
+
+    span.close::before,span.close::after{
+        position: fixed;
+        left: calc(40vw);
+        top: calc(40vh);
+    }
+
+  }
